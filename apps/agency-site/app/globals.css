@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #F6F1EA;
+  --ink: #0E141B;
+  --oasis-green: #1A5C4A;
+  --soft-clay: #C4A484;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-oasis-green: var(--oasis-green);
+  --color-soft-clay: var(--soft-clay);
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-fraunces);
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
