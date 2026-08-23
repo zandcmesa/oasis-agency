@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Secrets / credentials
+*.rtf
+**/*token*
+**/*secret*
+.env
+.env.*
+!.env.local.example
+!.env*.example
+
+# Dependencies / build
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Local editor / agent
+.claude/settings.local.json
+.superpowers/
+
+# Unrelated side projects in this folder
+real-estate-walkthroughs/
