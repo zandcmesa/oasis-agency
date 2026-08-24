@@ -1,0 +1,114 @@
+[
+  {
+    "name": "cornerstone-clip-01.jpg.b64",
+    "total": 134476,
+    "parts": [
+      {"file": "cornerstone-clip-01.jpg.b64.part00", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part01", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part02", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part03", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part04", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part05", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part06", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part07", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part08", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part09", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part10", "len": 12000},
+      {"file": "cornerstone-clip-01.jpg.b64.part11", "len": 2476}
+    ]
+  },
+  {
+    "name": "cornerstone-clip-miracles.jpg.b64",
+    "total": 92532,
+    "parts": [
+      {"file": "cornerstone-clip-miracles.jpg.b64.part00", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part01", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part02", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part03", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part04", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part05", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part06", "len": 12000},
+      {"file": "cornerstone-clip-miracles.jpg.b64.part07", "len": 8532}
+    ]
+  },
+  {
+    "name": "cornerstone-site-about.jpg.b64",
+    "total": 104588,
+    "parts": [
+      {"file": "cornerstone-site-about.jpg.b64.part00", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part01", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part02", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part03", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part04", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part05", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part06", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part07", "len": 12000},
+      {"file": "cornerstone-site-about.jpg.b64.part08", "len": 8588}
+    ]
+  },
+  {
+    "name": "cornerstone-site-home.jpg.b64",
+    "total": 142692,
+    "parts": [
+      {"file": "cornerstone-site-home.jpg.b64.part00", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part01", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part02", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part03", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part04", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part05", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part06", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part07", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part08", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part09", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part10", "len": 12000},
+      {"file": "cornerstone-site-home.jpg.b64.part11", "len": 10692}
+    ]
+  },
+  {
+    "name": "cornerstone-site-sermons.jpg.b64",
+    "total": 174020,
+    "parts": [
+      {"file": "cornerstone-site-sermons.jpg.b64.part00", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part01", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part02", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part03", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part04", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part05", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part06", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part07", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part08", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part09", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part10", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part11", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part12", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part13", "len": 12000},
+      {"file": "cornerstone-site-sermons.jpg.b64.part14", "len": 6020}
+    ]
+  },
+  {
+    "name": "foster-the-city-still-02.jpg.b64",
+    "total": 79272,
+    "parts": [
+      {"file": "foster-the-city-still-02.jpg.b64.part00", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part01", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part02", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part03", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part04", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part05", "len": 12000},
+      {"file": "foster-the-city-still-02.jpg.b64.part06", "len": 7272}
+    ]
+  },
+  {
+    "name": "foster-the-city-still.jpg.b64",
+    "total": 73836,
+    "parts": [
+      {"file": "foster-the-city-still.jpg.b64.part00", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part01", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part02", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part03", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part04", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part05", "len": 12000},
+      {"file": "foster-the-city-still.jpg.b64.part06", "len": 1836}
+    ]
+  }
+]
