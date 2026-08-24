@@ -48,15 +48,20 @@ Multi-sector creative studio website built per approved living brief. **Not** a 
 
 **REAL artifacts only.** NO fake UI chrome, NO invented screenshots, NO decorative browser frames with fabricated content.
 
-### Current proof:
-- **Cornerstone Church** — Websites + Social media (named with placeholders awaiting real screenshots)
-- **Foster the City** — Promotional video (named with placeholder awaiting real stills/clips)
+### Current proof (WIRED WITH REAL IMAGES):
+- **Cornerstone Church** — Websites + Social media
+  - Website: Live site screenshots (homepage, sermons, about)
+  - Social: Sermon clip stills from August 2024 content packs
+  - Images: `cornerstone-site-home.jpg`, `cornerstone-site-sermons.jpg`, `cornerstone-site-about.jpg`, `cornerstone-clip-01.jpg`, `cornerstone-clip-miracles.jpg`
+- **Foster the City** — Promotional video
+  - Launch promo stills from real B-roll production
+  - Images: `foster-the-city-still.jpg`, `foster-the-city-still-02.jpg`
 
 ### Empty cells:
 - AI agent workers & teams — marked "Emerging"
 - Digital presence strategy — marked "Forming"
 
-**Media placeholders:** `public/work/` directory has `.gitkeep` and README documenting expected assets. Site displays "Media coming" until real assets land.
+**All 7 image files** are referenced via `next/image` on homepage and Work page. Images should be placed in `public/work/` directory. See `public/work/README.md` for asset sources.
 
 ## What Was Removed
 

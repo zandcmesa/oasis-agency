@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
 
 export default function Home() {
@@ -132,65 +133,103 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <div className="space-y-16">
-            {/* Cornerstone Church - Websites & Social */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Cornerstone Website */}
             <FadeIn delay={0.1}>
-              <div className="border border-soft-clay/30 rounded-2xl p-8 lg:p-12">
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    <span className="text-xs bg-oasis-green/10 text-oasis-green px-3 py-1 rounded-full font-medium">
-                      Churches & ministries
-                    </span>
-                    <span className="text-xs bg-ink/10 text-ink px-3 py-1 rounded-full font-medium">
-                      Websites
-                    </span>
-                    <span className="text-xs bg-ink/10 text-ink px-3 py-1 rounded-full font-medium">
-                      Social media
-                    </span>
+              <Link href="/work" className="group block">
+                <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
+                  <div className="aspect-video relative bg-soft-clay/20">
+                    <Image
+                      src="/work/cornerstone-site-home.jpg"
+                      alt="Cornerstone Church website homepage"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h3 className="font-display text-3xl font-semibold text-ink mb-3">
-                    Cornerstone Church
-                  </h3>
-                  <p className="text-lg text-ink/70 leading-relaxed">
-                    Complete digital presence rebuild — unified Planning Center
-                    experience, searchable sermon library, weekly content
-                    strategy.
-                  </p>
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
+                        Churches & ministries
+                      </span>
+                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
+                        Websites
+                      </span>
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                      Cornerstone Church
+                    </h3>
+                    <p className="text-sm text-ink/70 leading-relaxed">
+                      Unified digital experience with sermon search and
+                      Planning Center integration.
+                    </p>
+                  </div>
                 </div>
-                <div className="aspect-video bg-soft-clay/20 rounded-xl flex items-center justify-center border border-soft-clay/30">
-                  <p className="text-soft-clay text-sm font-medium">
-                    Media coming
-                  </p>
-                </div>
-              </div>
+              </Link>
             </FadeIn>
 
-            {/* Foster the City - Promotional Video */}
-            <FadeIn delay={0.2}>
-              <div className="border border-soft-clay/30 rounded-2xl p-8 lg:p-12">
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    <span className="text-xs bg-oasis-green/10 text-oasis-green px-3 py-1 rounded-full font-medium">
-                      Ministry / nonprofit
-                    </span>
-                    <span className="text-xs bg-ink/10 text-ink px-3 py-1 rounded-full font-medium">
-                      Promotional video
-                    </span>
+            {/* Cornerstone Social Content */}
+            <FadeIn delay={0.15}>
+              <Link href="/work" className="group block">
+                <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
+                  <div className="aspect-[9/16] relative bg-soft-clay/20 max-h-[400px]">
+                    <Image
+                      src="/work/cornerstone-clip-01.jpg"
+                      alt="Cornerstone Church sermon clip"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h3 className="font-display text-3xl font-semibold text-ink mb-3">
-                    Foster the City
-                  </h3>
-                  <p className="text-lg text-ink/70 leading-relaxed">
-                    Ministry brand story — B-roll production capturing the
-                    heart of foster care and community support work.
-                  </p>
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
+                        Churches & ministries
+                      </span>
+                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
+                        Social media
+                      </span>
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                      Cornerstone Church
+                    </h3>
+                    <p className="text-sm text-ink/70 leading-relaxed">
+                      Weekly sermon clips and social content strategy.
+                    </p>
+                  </div>
                 </div>
-                <div className="aspect-video bg-soft-clay/20 rounded-xl flex items-center justify-center border border-soft-clay/30">
-                  <p className="text-soft-clay text-sm font-medium">
-                    Media coming
-                  </p>
+              </Link>
+            </FadeIn>
+
+            {/* Foster the City Video */}
+            <FadeIn delay={0.2}>
+              <Link href="/work" className="group block">
+                <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
+                  <div className="aspect-video relative bg-soft-clay/20">
+                    <Image
+                      src="/work/foster-the-city-still.jpg"
+                      alt="Foster the City promotional video"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
+                        Church & ministry
+                      </span>
+                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
+                        Promotional video
+                      </span>
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                      Foster the City
+                    </h3>
+                    <p className="text-sm text-ink/70 leading-relaxed">
+                      Ministry brand story — B-roll production for foster care
+                      community.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </FadeIn>
           </div>
 

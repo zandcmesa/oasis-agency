@@ -1,18 +1,23 @@
-# Work Media Placeholder
+# Real Work Media Assets
 
-This directory is reserved for real Cornerstone Church screenshots, Foster the City video stills/clips, and future project media assets.
+## Source
+- **Cornerstone Church:** Live website screenshots from https://cornerstonechurchma.com/ + sermon clip stills from social content packs (August 2024)
+- **Foster the City:** Launch promotional video stills (real B-roll from production)
 
-**Do NOT** place fake UI screenshots, invented browser chrome, or fabricated product frames here.
+## Assets (Real artifacts only — no fake UI)
 
-## Expected assets (when available):
+### Cornerstone Church Website
+- `cornerstone-site-home.jpg` — Live homepage screenshot (1440px)
+- `cornerstone-site-sermons.jpg` — Live sermons listing page
+- `cornerstone-site-about.jpg` — Live "Who We Are" page
 
-### Cornerstone Church
-- Website screenshots (sermon search UI, Planning Center integration, homepage)
-- Social media content examples (posts, campaigns)
+### Cornerstone Church Sermon Clips (Social Content)
+- `cornerstone-clip-01.jpg` — 9:16 sermon clip still (August 16, 2024 pack)
+- `cornerstone-clip-miracles.jpg` — 9:16 sermon clip still ("Neither slumber nor sleep" content)
 
-### Foster the City
-- Promotional video stills or short clips
-- B-roll production samples
+### Foster the City Promotional Video
+- `foster-the-city-still.jpg` — Launch promo still (~5s mark, child at window scene)
+- `foster-the-city-still-02.jpg` — Launch promo alternate still (~12s mark)
 
-## Current status
-Awaiting real media assets. Site currently displays "Media coming" placeholders on homepage and Work page.
+## Usage
+Referenced via next/image throughout the site (homepage featured work, /work product cases). No decorative browser chrome, no fake UI frames — just real media.
