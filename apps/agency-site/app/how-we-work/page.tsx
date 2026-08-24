@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
+import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "How we work — Oasis Creative Studios",
@@ -205,12 +205,7 @@ export default function HowWeWorkPage() {
               Have a project that needs technical depth and design craft?
               Let's talk.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-            >
-              Start a project
-            </Link>
+            <Button href="/contact">Start a project</Button>
           </FadeIn>
         </div>
       </section>

@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/FadeIn";
+import { Button } from "@/components/Button";
 import { useState, FormEvent } from "react";
 
 export default function ContactPage() {
@@ -182,15 +183,15 @@ export default function ContactPage() {
 
                 {/* Submit */}
                 <div>
-                  <button
+                  <Button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full sm:w-auto"
                   >
                     {status === "submitting"
                       ? "Sending..."
                       : "Send your project"}
-                  </button>
+                  </Button>
                 </div>
 
                 <p className="text-sm text-ink/50">

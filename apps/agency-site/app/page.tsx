@@ -1,7 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
+import { Button } from "@/components/Button";
 import { withBasePath } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,12 +16,7 @@ export default function Home() {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-            >
-              Start a project
-            </Link>
+            <Button href="/contact">Start a project</Button>
           </FadeIn>
         </div>
       </section>
@@ -192,12 +188,9 @@ export default function Home() {
 
           <FadeIn delay={0.3}>
             <div className="mt-12 lg:mt-16 text-center">
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-soft-clay/40 text-ink font-medium text-lg rounded-xl hover:border-oasis-green hover:text-oasis-green transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-              >
+              <Button variant="secondary" href="/work" className="px-8 py-4 text-lg">
                 View all work →
-              </Link>
+              </Button>
             </div>
           </FadeIn>
         </div>
@@ -266,12 +259,7 @@ export default function Home() {
             <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-semibold text-ink mb-8 tracking-tight">
               Ready to build?
             </h2>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-            >
-              Start a project
-            </Link>
+            <Button href="/contact">Start a project</Button>
           </FadeIn>
         </div>
       </section>

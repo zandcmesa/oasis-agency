@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 export function Footer() {
   return (
@@ -13,12 +14,9 @@ export function Footer() {
               We work with ambitious brands that need cutting-edge tech and
               sharp design. If that's you, let's talk.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-oasis-green text-paper font-medium text-lg rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-            >
+            <Button href="/contact" className="px-8 py-4 text-lg">
               Start a project
-            </Link>
+            </Button>
           </div>
 
           <div className="grid grid-cols-2 gap-8">

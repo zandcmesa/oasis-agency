@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Button } from "@/components/Button";
 import { withBasePath } from "@/lib/utils";
 
 export function Navigation() {
@@ -147,13 +148,13 @@ export function Navigation() {
             >
               Contact
             </Link>
-            <Link
+            <Button
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center justify-center px-8 py-4 bg-oasis-green text-paper font-medium text-lg rounded-xl hover:bg-oasis-green/90 transition-all min-h-[44px] mt-4"
+              className="px-8 py-4 text-lg mt-4"
             >
               Start a project
-            </Link>
+            </Button>
           </div>
         </div>
       )}

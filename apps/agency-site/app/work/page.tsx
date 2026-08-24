@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
+import { Button } from "@/components/Button";
 import { withBasePath } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -238,12 +239,7 @@ export default function WorkPage() {
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-ink mb-8 tracking-tight">
               Start your project
             </h2>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
-            >
-              Start a project
-            </Link>
+            <Button href="/contact">Start a project</Button>
           </FadeIn>
         </div>
       </section>
