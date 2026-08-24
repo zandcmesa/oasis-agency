@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { withBasePath } from "@/lib/utils";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -26,10 +28,17 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link
           href="/"
-          className="font-display text-2xl font-semibold text-ink hover:text-oasis-green transition-colors"
+          className="hover:opacity-80 transition-opacity"
           onClick={() => setMobileMenuOpen(false)}
         >
-          Oasis
+          <Image
+            src={withBasePath('/oasis-wordmark.svg')}
+            alt="Oasis"
+            width={120}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
