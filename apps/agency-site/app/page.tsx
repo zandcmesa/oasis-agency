@@ -168,11 +168,13 @@ export default function Home() {
               <Link href="/work" className="group block">
                 <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
                   <div className="aspect-video relative bg-soft-clay/20">
-                    <Image
-                      src={withBasePath("/work/foster-the-city-still.jpg")}
-                      alt="Foster the City promotional video"
-                      fill
-                      className="object-cover"
+                    <video
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={withBasePath("/work/foster-the-city-still.jpg")}
+                      className="w-full h-full object-cover"
+                      src={withBasePath("/work/foster-the-city-launch.mp4")}
                     />
                   </div>
                   <div className="p-5">
