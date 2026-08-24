@@ -1,27 +1,28 @@
 # Missing Work Assets
 
-## Status: 6 of 7 files missing
+## Status: 6 of 7 files missing, 1 file 18.7% complete
 
-The file attachment mechanism failed to deliver the JPEG files. Only partial data for one file exists.
+The file attachment mechanism failed. A manifest exists showing the chunking structure, but only 2 of 7 parts for one file were delivered.
 
 ## Current State
 
-### ✅ Partial (16.3% complete)
-- `foster-the-city-still.jpg` - **9,000 / 55,375 bytes** (16.3%)
-  - ✅ Valid JPEG header (FF D8)
-  - ⚠️ Truncated at 9KB
-  - Created from: `_chunks/foster-the-city-still.jpg.b64.part00`
+### ⚠️ Partial (18.7% of base64 data received)
+- `foster-the-city-still.jpg` - **13,836 / 73,836 base64 chars** (18.7%)
+  - ✅ Has: part00 (12,000 bytes), part06 (1,836 bytes)
+  - ❌ Missing: part01, part02, part03, part04, part05 (60,000 bytes)
+  - Cannot assemble: Missing middle chunks
+  - Expected final size: 55,375 bytes
 
-### ❌ Completely Missing (0 bytes received)
+### ❌ Completely Missing (0% received)
 
-1. **foster-the-city-still-02.jpg** - 59,452 bytes needed
-2. **cornerstone-clip-miracles.jpg** - 69,399 bytes needed
-3. **cornerstone-site-about.jpg** - 78,439 bytes needed
-4. **cornerstone-clip-01.jpg** - 100,856 bytes needed
-5. **cornerstone-site-home.jpg** - 107,017 bytes needed
-6. **cornerstone-site-sermons.jpg** - 130,515 bytes needed
+1. **foster-the-city-still-02.jpg** - 0 / 7 parts (79,272 base64 chars → 59,452 bytes)
+2. **cornerstone-clip-miracles.jpg** - 0 / 8 parts (92,532 base64 chars → 69,399 bytes)
+3. **cornerstone-site-about.jpg** - 0 / 9 parts (104,588 base64 chars → 78,439 bytes)
+4. **cornerstone-clip-01.jpg** - 0 / 12 parts (134,476 base64 chars → 100,856 bytes)
+5. **cornerstone-site-home.jpg** - 0 / 12 parts (142,692 base64 chars → 107,017 bytes)
+6. **cornerstone-site-sermons.jpg** - 0 / 15 parts (174,020 base64 chars → 130,515 bytes)
 
-**Total missing data: ~595 KB**
+**Total missing: 85 of 88 part files (96.6%)**
 
 ## What Happened
 
