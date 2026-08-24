@@ -1,25 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
+import { withBasePath } from "@/lib/utils";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="px-6 lg:px-8 py-24 lg:py-32">
+      <section className="px-6 lg:px-8 py-16 lg:py-24">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h1 className="font-display text-6xl lg:text-8xl font-semibold leading-[1.1] text-ink mb-8 tracking-tight">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-semibold leading-[1.1] text-ink mb-8 tracking-tight">
               Cutting-edge tech + design for ambitious brands
             </h1>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p className="text-2xl lg:text-3xl leading-relaxed text-ink/70 mb-12 max-w-4xl">
-              We build systems that ship. Custom websites, AI agent teams,
-              social content, promotional video, and digital presence
-              strategy — for churches, service businesses, real estate,
-              commercial properties, and wellness brands.
-            </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <Link
@@ -33,13 +26,13 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section className="px-6 lg:px-8 py-24 border-y border-soft-clay/30">
+      <section className="px-6 lg:px-8 py-16 lg:py-20 border-y border-soft-clay/30">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <p className="text-soft-clay text-xs font-medium tracking-wider uppercase mb-4">
               What we do
             </p>
-            <h2 className="font-display text-4xl lg:text-6xl font-semibold text-ink mb-16 tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-12 lg:mb-16 tracking-tight">
               Five product lines
             </h2>
           </FadeIn>
@@ -47,69 +40,61 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             <FadeIn delay={0.1}>
               <div>
-                <h3 className="font-display text-2xl font-semibold text-oasis-green mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
                   Websites
                 </h3>
-                <p className="text-lg text-ink/70 leading-relaxed">
-                  Custom-built, headless, modern. The technical fixer — we
-                  solve problems other agencies can't. Planning Center
-                  integration, sermon search, unified digital experiences.
+                <p className="text-base text-ink/70">
+                  Custom-built. Headless. Modern tech.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.15}>
               <div>
-                <h3 className="font-display text-2xl font-semibold text-oasis-green mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
                   Social media content
                 </h3>
-                <p className="text-lg text-ink/70 leading-relaxed">
-                  Strategy and execution. We run the campaigns your team
-                  doesn't have time for — consistent, on-brand, conversion-
-                  focused content that works.
+                <p className="text-base text-ink/70">
+                  Strategy + execution. On-brand campaigns.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
               <div>
-                <h3 className="font-display text-2xl font-semibold text-oasis-green mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
                   Promotional video
                 </h3>
-                <p className="text-lg text-ink/70 leading-relaxed">
-                  B-roll production with premium craft. Event coverage,
-                  brand stories, ministry showcases — production that makes
-                  your work look as good as it is.
+                <p className="text-base text-ink/70">
+                  B-roll production. Premium craft.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.25}>
               <div className="opacity-70">
-                <h3 className="font-display text-2xl font-semibold text-ink mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-2">
                   AI agent workers & teams
                 </h3>
-                <p className="text-lg text-ink/70 leading-relaxed">
+                <p className="text-base text-ink/70">
                   <span className="text-soft-clay text-xs font-medium tracking-wider uppercase mr-2">
                     Emerging
                   </span>
-                  Custom automation and AI systems for operations that scale
-                  beyond headcount.
+                  Custom automation systems.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3}>
               <div className="opacity-70">
-                <h3 className="font-display text-2xl font-semibold text-ink mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-2">
                   Digital presence strategy
                 </h3>
-                <p className="text-lg text-ink/70 leading-relaxed">
+                <p className="text-base text-ink/70">
                   <span className="text-soft-clay text-xs font-medium tracking-wider uppercase mr-2">
                     Forming
                   </span>
-                  SEO, AI search optimization, giving platform setup, and
-                  discovery consulting.
+                  SEO, search optimization, consulting.
                 </p>
               </div>
             </FadeIn>
@@ -118,49 +103,36 @@ export default function Home() {
       </section>
 
       {/* Proof Section */}
-      <section className="px-6 lg:px-8 py-24 lg:py-32">
+      <section className="px-6 lg:px-8 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <p className="text-soft-clay text-xs font-medium tracking-wider uppercase mb-4">
               Recent work
             </p>
-            <h2 className="font-display text-4xl lg:text-6xl font-semibold text-ink mb-6 tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-12 lg:mb-16 tracking-tight">
               Real proof
             </h2>
-            <p className="text-xl text-ink/70 leading-relaxed max-w-3xl mb-16">
-              Systems we've built and shipped. Not templates. Not wrappers.
-              Real engineering and design craft.
-            </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Cornerstone Website */}
             <FadeIn delay={0.1}>
               <Link href="/work" className="group block">
                 <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
                   <div className="aspect-video relative bg-soft-clay/20">
                     <Image
-                      src="/work/cornerstone-site-home.jpg"
+                      src={withBasePath("/work/cornerstone-site-home.jpg")}
                       alt="Cornerstone Church website homepage"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
-                        Churches & ministries
-                      </span>
-                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
-                        Websites
-                      </span>
-                    </div>
-                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                  <div className="p-5">
+                    <h3 className="font-display text-lg font-semibold text-ink mb-1 group-hover:text-oasis-green transition-colors">
                       Cornerstone Church
                     </h3>
-                    <p className="text-sm text-ink/70 leading-relaxed">
-                      Unified digital experience with sermon search and
-                      Planning Center integration.
+                    <p className="text-sm text-ink/60">
+                      Website · Sermon search · Planning Center
                     </p>
                   </div>
                 </div>
@@ -173,26 +145,18 @@ export default function Home() {
                 <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
                   <div className="aspect-[9/16] relative bg-soft-clay/20 max-h-[400px]">
                     <Image
-                      src="/work/cornerstone-clip-01.jpg"
+                      src={withBasePath("/work/cornerstone-clip-01.jpg")}
                       alt="Cornerstone Church sermon clip"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
-                        Churches & ministries
-                      </span>
-                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
-                        Social media
-                      </span>
-                    </div>
-                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                  <div className="p-5">
+                    <h3 className="font-display text-lg font-semibold text-ink mb-1 group-hover:text-oasis-green transition-colors">
                       Cornerstone Church
                     </h3>
-                    <p className="text-sm text-ink/70 leading-relaxed">
-                      Weekly sermon clips and social content strategy.
+                    <p className="text-sm text-ink/60">
+                      Social content · Weekly clips
                     </p>
                   </div>
                 </div>
@@ -205,27 +169,18 @@ export default function Home() {
                 <div className="border border-soft-clay/30 rounded-2xl overflow-hidden hover:border-oasis-green/50 transition-colors">
                   <div className="aspect-video relative bg-soft-clay/20">
                     <Image
-                      src="/work/foster-the-city-still.jpg"
+                      src={withBasePath("/work/foster-the-city-still.jpg")}
                       alt="Foster the City promotional video"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-xs bg-oasis-green/10 text-oasis-green px-2 py-1 rounded-full font-medium">
-                        Church & ministry
-                      </span>
-                      <span className="text-xs bg-ink/10 text-ink px-2 py-1 rounded-full font-medium">
-                        Promotional video
-                      </span>
-                    </div>
-                    <h3 className="font-display text-xl font-semibold text-ink mb-2 group-hover:text-oasis-green transition-colors">
+                  <div className="p-5">
+                    <h3 className="font-display text-lg font-semibold text-ink mb-1 group-hover:text-oasis-green transition-colors">
                       Foster the City
                     </h3>
-                    <p className="text-sm text-ink/70 leading-relaxed">
-                      Ministry brand story — B-roll production for foster care
-                      community.
+                    <p className="text-sm text-ink/60">
+                      Promotional video · Ministry brand
                     </p>
                   </div>
                 </div>
@@ -234,7 +189,7 @@ export default function Home() {
           </div>
 
           <FadeIn delay={0.3}>
-            <div className="mt-16 text-center">
+            <div className="mt-12 lg:mt-16 text-center">
               <Link
                 href="/work"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-soft-clay/40 text-ink font-medium text-lg rounded-xl hover:border-oasis-green hover:text-oasis-green transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
@@ -247,75 +202,55 @@ export default function Home() {
       </section>
 
       {/* Sectors Section */}
-      <section className="px-6 lg:px-8 py-24 border-t border-soft-clay/30">
+      <section className="px-6 lg:px-8 py-16 lg:py-20 border-t border-soft-clay/30">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <p className="text-soft-clay text-xs font-medium tracking-wider uppercase mb-4">
               Who we serve
             </p>
-            <h2 className="font-display text-4xl lg:text-6xl font-semibold text-ink mb-16 tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-12 lg:mb-16 tracking-tight">
               Multi-sector focus
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <FadeIn delay={0.1}>
-              <div className="p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-xl font-semibold text-ink mb-2">
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Churches & ministries
                 </h3>
-                <p className="text-base text-ink/70">
-                  Digital presence, sermon libraries, unified giving and events
-                  platforms, weekly communications.
-                </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-xl font-semibold text-ink mb-2">
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Service businesses
                 </h3>
-                <p className="text-base text-ink/70">
-                  Construction, trades, home services — websites and digital
-                  marketing that convert leads into customers.
-                </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-xl font-semibold text-ink mb-2">
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Real estate
                 </h3>
-                <p className="text-base text-ink/70">
-                  Agent websites, property showcases, branding, and social
-                  content strategies.
-                </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.25}>
-              <div className="p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-xl font-semibold text-ink mb-2">
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Commercial properties
                 </h3>
-                <p className="text-base text-ink/70">
-                  Golf courses, event venues, hospitality — premium digital
-                  experiences.
-                </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-xl font-semibold text-ink mb-2">
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Salon / spa / wellness
                 </h3>
-                <p className="text-base text-ink/70">
-                  Booking-integrated websites, brand identity, and content
-                  strategies that build community.
-                </p>
               </div>
             </FadeIn>
           </div>
@@ -323,16 +258,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 lg:px-8 py-24 lg:py-32 border-t border-soft-clay/30">
+      <section className="px-6 lg:px-8 py-16 lg:py-24 border-t border-soft-clay/30">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <h2 className="font-display text-5xl lg:text-7xl font-semibold text-ink mb-8 tracking-tight">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-semibold text-ink mb-8 tracking-tight">
               Ready to build?
             </h2>
-            <p className="text-2xl text-ink/70 leading-relaxed mb-12">
-              We work with brands that need cutting-edge tech and bold design.
-              Let's talk about your project.
-            </p>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-10 py-5 bg-oasis-green text-paper font-medium text-xl rounded-xl hover:bg-oasis-green/90 transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-oasis-green focus:ring-offset-2 focus:ring-offset-paper"
