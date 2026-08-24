@@ -69,9 +69,12 @@ When patterns change, update this file so it stays current.
 - Pill buttons (this)
 - Wordmark header
 - FTC inline video
+- Living-wall hero loop (`/atmosphere/oasis-living-wall-loop.mp4`)
+  - Currently a Ken Burns placeholder
+  - Path remains stable when replaced with Kling/Artlist cut
 
 **Queued:**
-- One living-wall video loop (not site-wide wallpaper)
+- (None currently)
 
 ## Voice & Leak Bans
 

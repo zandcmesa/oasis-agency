@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
 import { Button } from "@/components/Button";
+import { HeroAtmosphere } from "@/components/HeroAtmosphere";
 import { withBasePath } from "@/lib/utils";
 import Link from "next/link";
 
@@ -8,8 +9,16 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="px-6 lg:px-8 py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative px-6 lg:px-8 py-16 lg:py-24 min-h-[70vh] flex items-center overflow-hidden">
+        <HeroAtmosphere />
+        <div
+          className="absolute inset-0 pointer-events-none -z-[5]"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(246, 241, 234, 0.85) 0%, rgba(246, 241, 234, 0.40) 100%)",
+          }}
+        />
+        <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-semibold leading-[1.1] text-ink mb-8 tracking-tight">
               Cutting-edge tech + design for ambitious brands
