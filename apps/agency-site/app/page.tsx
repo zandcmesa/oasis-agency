@@ -21,7 +21,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.1] text-paper mb-8 tracking-tight">
-              Digital excellence for churches and ministries
+              Cutting-edge tech + design for ambitious brands
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
