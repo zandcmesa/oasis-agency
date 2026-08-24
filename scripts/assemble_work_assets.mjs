@@ -99,15 +99,50 @@ function assembleFile(filename) {
   return decoded.length === expectedSize;
 }
 
-function checkManifest() {
+function loadManifest() {
   const manifestPath = join(CHUNKS_DIR, 'manifest.json');
   if (existsSync(manifestPath)) {
-    console.log('Found manifest.json:');
-    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-    console.log(JSON.stringify(manifest, null, 2));
-    return manifest;
+    return JSON.parse(readFileSync(manifestPath, 'utf8'));
   }
   return null;
+}
+
+function checkManifestCoverage(manifest) {
+  if (!manifest) return;
+  
+  console.log('\n=== Manifest Analysis ===');
+  
+  for (const fileEntry of manifest) {
+    const filename = fileEntry.name.replace('.b64', '');
+    console.log(`\n${filename}:`);
+    console.log(`  Expected: ${fileEntry.parts.length} parts (${fileEntry.total} base64 chars)`);
+    
+    let foundCount = 0;
+    const missingParts = [];
+    
+    for (const part of fileEntry.parts) {
+      const partPath = join(CHUNKS_DIR, part.file);
+      if (existsSync(partPath)) {
+        const actualSize = statSync(partPath).size;
+        if (actualSize === part.len) {
+          foundCount++;
+        } else {
+          console.log(`  ⚠️  ${part.file}: size mismatch (${actualSize} vs ${part.len})`);
+        }
+      } else {
+        missingParts.push(part.file);
+      }
+    }
+    
+    const percentage = ((foundCount / fileEntry.parts.length) * 100).toFixed(1);
+    console.log(`  Found: ${foundCount}/${fileEntry.parts.length} parts (${percentage}%)`);
+    
+    if (missingParts.length > 0 && missingParts.length <= 5) {
+      console.log(`  Missing: ${missingParts.join(', ')}`);
+    } else if (missingParts.length > 5) {
+      console.log(`  Missing: ${missingParts.slice(0, 3).join(', ')} ... and ${missingParts.length - 3} more`);
+    }
+  }
 }
 
 function main() {
@@ -118,8 +153,14 @@ function main() {
     process.exit(1);
   }
   
-  // Check for manifest
-  checkManifest();
+  // Load and analyze manifest
+  const manifest = loadManifest();
+  if (manifest) {
+    console.log(`Found manifest with ${manifest.length} files`);
+    checkManifestCoverage(manifest);
+  } else {
+    console.log('No manifest.json found');
+  }
   
   // List all files in chunks directory
   console.log('\nFiles in chunks directory:');

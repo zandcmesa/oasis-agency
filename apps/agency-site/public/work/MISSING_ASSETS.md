@@ -28,9 +28,9 @@ The file attachment mechanism failed. A manifest exists showing the chunking str
 
 The user message indicated "Seven JPEG images are attached to this message (file:// from the launcher)" but:
 - No binary JPEG files were found in common attachment locations (/tmp, ~/.cursor, /opt, artifacts)
-- Only one partial base64-encoded chunk file exists
-- No complete chunk sequences for any file
-- No manifest.json to guide assembly
+- A manifest.json exists in `_chunks/` showing the complete chunking structure
+- Only 2 of 88 total part files were delivered (2.3%)
+- Cannot assemble any complete JPEG from available parts
 
 ## How to Fix
 
