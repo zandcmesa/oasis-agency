@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { FadeIn } from "@/components/FadeIn";
 import { Button } from "@/components/Button";
 import { useState, FormEvent } from "react";
@@ -17,10 +16,12 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
+      business: formData.get("business"),
+      phone: formData.get("phone"),
       email: formData.get("email"),
-      sector: formData.get("sector"),
-      product: formData.get("product"),
-      message: formData.get("message"),
+      town: formData.get("town"),
+      leaking: formData.get("leaking"),
+      hours: formData.get("hours"),
     };
 
     console.log("Form submission:", data);
@@ -37,11 +38,10 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <h1 className="font-display text-6xl lg:text-8xl font-semibold leading-[1.1] text-ink mb-8 tracking-tight">
-              Start a project
+              Book a 15-minute discovery
             </h1>
             <p className="text-2xl lg:text-3xl leading-relaxed text-ink/70">
-              We work with ambitious brands that need cutting-edge tech and
-              bold design. Tell us about your project.
+              Tell us about your business. We'll explain how After-Hours Lead Catcher works and whether it's a fit.
             </p>
           </FadeIn>
         </div>
@@ -57,8 +57,8 @@ export default function ContactPage() {
                   We'll be in touch
                 </h2>
                 <p className="text-lg text-ink/70">
-                  Thanks for reaching out. We'll review your project and get
-                  back to you soon.
+                  Thanks for reaching out. We'll review your info and get back
+                  to you within 1 business day to schedule your discovery call.
                 </p>
               </div>
             </FadeIn>
@@ -84,6 +84,44 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Business */}
+                <div>
+                  <label
+                    htmlFor="business"
+                    className="block text-sm font-medium text-ink mb-2"
+                  >
+                    Business name *
+                  </label>
+                  <input
+                    type="text"
+                    id="business"
+                    name="business"
+                    required
+                    disabled={status === "submitting"}
+                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
+                    placeholder="Your business name"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-ink mb-2"
+                  >
+                    Phone *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    disabled={status === "submitting"}
+                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
                 {/* Email */}
                 <div>
                   <label
@@ -103,81 +141,64 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Sector */}
+                {/* Town */}
                 <div>
                   <label
-                    htmlFor="sector"
+                    htmlFor="town"
                     className="block text-sm font-medium text-ink mb-2"
                   >
-                    Sector
+                    Town/city *
                   </label>
-                  <select
-                    id="sector"
-                    name="sector"
-                    disabled={status === "submitting"}
-                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
-                  >
-                    <option value="">Select a sector (optional)</option>
-                    <option value="churches-ministries">
-                      Churches & ministries
-                    </option>
-                    <option value="service-businesses">
-                      Service businesses
-                    </option>
-                    <option value="real-estate">Real estate</option>
-                    <option value="commercial-properties">
-                      Commercial properties
-                    </option>
-                    <option value="salon-spa-wellness">
-                      Salon / spa / wellness
-                    </option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                {/* Product Interest */}
-                <div>
-                  <label
-                    htmlFor="product"
-                    className="block text-sm font-medium text-ink mb-2"
-                  >
-                    Product interest
-                  </label>
-                  <select
-                    id="product"
-                    name="product"
-                    disabled={status === "submitting"}
-                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
-                  >
-                    <option value="">Select a product (optional)</option>
-                    <option value="websites">Websites</option>
-                    <option value="social-media">Social media content</option>
-                    <option value="promo-video">Promotional video</option>
-                    <option value="ai-agents">AI agent workers & teams</option>
-                    <option value="digital-strategy">
-                      Digital presence strategy
-                    </option>
-                    <option value="multiple">Multiple products</option>
-                    <option value="unsure">Not sure yet</option>
-                  </select>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-ink mb-2"
-                  >
-                    Tell us about your project *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
+                  <input
+                    type="text"
+                    id="town"
+                    name="town"
                     required
-                    rows={6}
                     disabled={status === "submitting"}
-                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50 resize-none"
-                    placeholder="What are you looking to build? What problems are you trying to solve?"
+                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
+                    placeholder="Your town or city"
+                  />
+                </div>
+
+                {/* What's leaking */}
+                <div>
+                  <label
+                    htmlFor="leaking"
+                    className="block text-sm font-medium text-ink mb-2"
+                  >
+                    What's leaking? *
+                  </label>
+                  <select
+                    id="leaking"
+                    name="leaking"
+                    required
+                    disabled={status === "submitting"}
+                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
+                  >
+                    <option value="">Select what you're losing</option>
+                    <option value="after-hours-calls">After-hours calls</option>
+                    <option value="daytime-misses">Daytime missed calls</option>
+                    <option value="web-forms">Web forms / estimate requests</option>
+                    <option value="reviews">Need more Google reviews</option>
+                    <option value="all">All of the above</option>
+                  </select>
+                </div>
+
+                {/* Hours */}
+                <div>
+                  <label
+                    htmlFor="hours"
+                    className="block text-sm font-medium text-ink mb-2"
+                  >
+                    Your business hours
+                  </label>
+                  <input
+                    type="text"
+                    id="hours"
+                    name="hours"
+                    disabled={status === "submitting"}
+                    className="w-full px-4 py-3 bg-white border border-soft-clay/40 rounded-xl text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-oasis-green focus:border-transparent disabled:opacity-50"
+                    placeholder="e.g. Mon-Fri 8am-5pm"
                   />
                 </div>
 
@@ -190,13 +211,13 @@ export default function ContactPage() {
                   >
                     {status === "submitting"
                       ? "Sending..."
-                      : "Send your project"}
+                      : "Book discovery call"}
                   </Button>
                 </div>
 
                 <p className="text-sm text-ink/50">
-                  * Required fields. We'll get back to you within 1-2 business
-                  days.
+                  * Required fields. We'll get back to you within 1 business
+                  day to schedule your call.
                 </p>
               </form>
             </FadeIn>
@@ -216,17 +237,18 @@ export default function ContactPage() {
             </h2>
             <div className="space-y-6 text-lg text-ink/70 leading-relaxed">
               <p>
-                After you submit, we'll review your project and get back to you
-                within 1-2 business days.
+                After you submit, we'll review your business and get back to
+                you within 1 business day to schedule your 15-minute discovery
+                call.
               </p>
               <p>
-                If we're a fit, we'll schedule a discovery call to understand
-                your goals, technical requirements, and timeline. Then we'll
-                put together a proposal and scope of work.
+                On the call, we'll walk through how After-Hours Lead Catcher
+                works, explain the forwarding setup, and answer any questions
+                about pricing or coverage.
               </p>
               <p>
-                We work with brands that value technical depth, design craft,
-                and ownership. If that's you, we're excited to hear from you.
+                If it's a fit, we'll set you up with the system and get your
+                forwarding line configured. Most clients are live within a week.
               </p>
             </div>
           </FadeIn>
