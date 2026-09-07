@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { FadeIn } from "@/components/FadeIn";
 import { Button } from "@/components/Button";
 import { useState, FormEvent } from "react";
@@ -17,10 +16,12 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
+      business: formData.get("business"),
+      phone: formData.get("phone"),
       email: formData.get("email"),
-      sector: formData.get("sector"),
-      product: formData.get("product"),
-      message: formData.get("message"),
+      town: formData.get("town"),
+      leaking: formData.get("leaking"),
+      hours: formData.get("hours"),
     };
 
     console.log("Form submission:", data);
