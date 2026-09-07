@@ -20,11 +20,16 @@ export default function Home() {
         />
         <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.1] text-paper mb-8 tracking-tight">
-              Cutting-edge tech + design for ambitious brands
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.1] text-paper mb-6 tracking-tight">
+              AI agent teams that pick up the phone, follow up on leads, and protect your reputation
             </h1>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.15}>
+            <p className="text-xl sm:text-2xl text-paper/80 mb-8 max-w-4xl leading-relaxed">
+              We build custom automation for service businesses — after-hours coverage, instant lead response, and review management that runs 24/7.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.25}>
             <Button href="/contact">Start a project</Button>
           </FadeIn>
         </div>
@@ -37,73 +42,90 @@ export default function Home() {
             <p className="text-soft-clay text-xs font-medium tracking-wider uppercase mb-4">
               What we do
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-12 lg:mb-16 tracking-tight">
-              Five product lines
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-8 tracking-tight">
+              Phase 1 AI agent teams
             </h2>
+            <p className="text-xl text-ink/70 mb-12 lg:mb-16 max-w-4xl">
+              We build custom automation systems that solve the problems keeping you up at night — missed calls, slow follow-ups, and reputation risk.
+            </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
             <FadeIn delay={0.1}>
-              <div>
-                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
-                  Websites
+              <div className="border-l-4 border-oasis-green pl-6">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-3">
+                  After-hours coverage
                 </h3>
-                <p className="text-base text-ink/70">
-                  Custom-built. Headless. Modern tech.
+                <p className="text-base text-ink/70 leading-relaxed">
+                  Phone and missed-call fallback when your team can't answer. Never lose a lead to a competitor who picked up.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div>
-                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
-                  Social media content
+              <div className="border-l-4 border-oasis-green pl-6">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-3">
+                  Instant lead response
                 </h3>
-                <p className="text-base text-ink/70">
-                  Strategy + execution. On-brand campaigns.
+                <p className="text-base text-ink/70 leading-relaxed">
+                  Form and inquiry follow-up in seconds, not hours. Speed wins deals — we make you faster than anyone calling you back tomorrow.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div>
-                <h3 className="font-display text-xl sm:text-2xl font-semibold text-oasis-green mb-2">
-                  Promotional video
+              <div className="border-l-4 border-oasis-green pl-6">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-3">
+                  Review & reputation help
                 </h3>
-                <p className="text-base text-ink/70">
-                  B-roll production. Premium craft.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.25}>
-              <div className="opacity-70">
-                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-2">
-                  AI agent workers & teams
-                </h3>
-                <p className="text-base text-ink/70">
-                  <span className="text-soft-clay text-xs font-medium tracking-wider uppercase mr-2">
-                    Emerging
-                  </span>
-                  Custom automation systems.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.3}>
-              <div className="opacity-70">
-                <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink mb-2">
-                  Digital presence strategy
-                </h3>
-                <p className="text-base text-ink/70">
-                  <span className="text-soft-clay text-xs font-medium tracking-wider uppercase mr-2">
-                    Forming
-                  </span>
-                  SEO, search optimization, consulting.
+                <p className="text-base text-ink/70 leading-relaxed">
+                  Automated outreach to happy customers. More 5-star reviews, less manual chasing. Protect what you've built.
                 </p>
               </div>
             </FadeIn>
           </div>
+
+          <FadeIn delay={0.25}>
+            <div className="border-t border-soft-clay/30 pt-12">
+              <p className="text-soft-clay text-xs font-medium tracking-wider uppercase mb-6">
+                Also available
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                  <h4 className="font-display text-lg font-semibold text-ink mb-1">
+                    Websites
+                  </h4>
+                  <p className="text-sm text-ink/60">
+                    Custom-built. Headless. Modern tech.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-semibold text-ink mb-1">
+                    Social media content
+                  </h4>
+                  <p className="text-sm text-ink/60">
+                    Strategy + execution. On-brand.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-semibold text-ink mb-1">
+                    Promotional video
+                  </h4>
+                  <p className="text-sm text-ink/60">
+                    B-roll production. Premium craft.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-semibold text-ink mb-1">
+                    Digital strategy
+                  </h4>
+                  <p className="text-sm text-ink/60">
+                    SEO, search optimization, consulting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -213,28 +235,23 @@ export default function Home() {
               Who we serve
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-semibold text-ink mb-12 lg:mb-16 tracking-tight">
-              Multi-sector focus
+              Service businesses & beyond
             </h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <FadeIn delay={0.1}>
-              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+              <div className="p-5 lg:p-6 border-2 border-oasis-green/40 rounded-xl">
                 <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
-                  Churches & ministries
+                  Service businesses
                 </h3>
+                <p className="text-sm text-ink/60 mt-2">
+                  Salons, spas, wellness, construction, trades
+                </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
-                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
-                  Service businesses
-                </h3>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.2}>
               <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
                 <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Real estate
@@ -242,7 +259,7 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.25}>
+            <FadeIn delay={0.2}>
               <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
                 <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
                   Commercial properties
@@ -250,10 +267,26 @@ export default function Home() {
               </div>
             </FadeIn>
 
+            <FadeIn delay={0.25}>
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
+                  Churches & ministries
+                </h3>
+              </div>
+            </FadeIn>
+
             <FadeIn delay={0.3}>
               <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
                 <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
-                  Salon / spa / wellness
+                  Professional services
+                </h3>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.35}>
+              <div className="p-5 lg:p-6 border border-soft-clay/30 rounded-xl">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
+                  Local retail
                 </h3>
               </div>
             </FadeIn>

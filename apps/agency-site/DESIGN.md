@@ -81,7 +81,8 @@ When patterns change, update this file so it stays current.
 **Voice:**
 - First person plural: "we" / "Oasis"
 - Direct, technical, confident
-- No fluff or superlatives
+- Outcome-focused: solve problems, not sell features
+- Service-business tone (not church-first on homepage)
 
 **Leak bans** (never mention):
 - $0 / free tier / donated services
@@ -89,3 +90,9 @@ When patterns change, update this file so it stays current.
 - Gmail
 - Template managers
 - "Easy" or "simple"
+- "Book a call with [founder name]"
+- Personal email addresses
+- Cold outreach tools
+
+**Primary offer positioning:**
+Phase 1 AI agent teams are the tip of the spear — after-hours coverage, instant lead response, review management. Lead with outcomes for service businesses. Church work is proof of craft, not the primary audience pitch on the homepage.
