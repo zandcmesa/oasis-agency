@@ -246,7 +246,7 @@ export default function Home() {
                   Service businesses
                 </h3>
                 <p className="text-sm text-ink/60 mt-2">
-                  Salons, spas, wellness, construction, trades
+                  Trades, auto, dental/medspa
                 </p>
               </div>
             </FadeIn>
