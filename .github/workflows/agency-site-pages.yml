@@ -35,6 +35,9 @@ jobs:
 
       - name: Build site
         working-directory: apps/agency-site
+        env:
+          NEXT_PUBLIC_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
+          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
         run: npm run build
 
       - name: Upload artifact
