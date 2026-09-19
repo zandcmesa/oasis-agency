@@ -20,7 +20,7 @@
   --color-card: rgb(255 255 255 / 0.55);
 
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-serif: var(--font-hermione), Georgia, serif;
 
   --radius-*: initial;
   --radius-sm: 12px;
@@ -111,18 +111,19 @@ body {
   font-weight: 500;
 }
 @utility text-metric {
-  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 5vw, 5.5rem);
   line-height: 1;
-  letter-spacing: -0.03em;
-  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-weight: 400;
   font-variant-numeric: tabular-nums;
 }
 @utility text-wordmark {
   font-family: var(--font-serif);
   font-size: clamp(6rem, 24vw, 30rem);
   line-height: 0.8;
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-weight: 400;
 }
 
 /* Surfaces and lines */
@@ -217,14 +218,10 @@ button:hover .swap__text::after {
   width: 50%;
   height: 50%;
   transform: translate(-50%, -50%);
-  transition:
-    transform var(--dur-base) var(--ease-arrow),
-    fill var(--dur-base) var(--ease-arrow);
+  transition: transform var(--dur-base) var(--ease-arrow);
 }
 .btn-arrow__circle svg.is-hover {
-  top: 100%;
-  left: 0;
-  transform: translate(0, 0);
+  transform: translate(-150%, 50%);
 }
 .btn-arrow:hover .btn-arrow__circle {
   clip-path: circle(45% at 50% 50%);
@@ -233,7 +230,7 @@ button:hover .swap__text::after {
   transform: translate(50%, -150%);
 }
 .btn-arrow:hover .btn-arrow__circle svg.is-hover {
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, -50%);
 }
 
 /* Ticker */

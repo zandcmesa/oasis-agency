@@ -56,7 +56,7 @@ export function Header() {
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link href="/" className="block hover:opacity-80 transition-opacity" onClick={() => setOpen(false)} aria-label="Oasis home">
-              <Wordmark className="h-6 w-auto" />
+              <Wordmark className="h-8 w-auto" />
             </Link>
 
             <nav className="hidden md:flex items-center gap-8" aria-label="Primary">

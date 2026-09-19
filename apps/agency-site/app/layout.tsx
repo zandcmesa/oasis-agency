@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Fraunces } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/blocks/Header";
 import { Footer } from "@/components/blocks/Footer";
@@ -12,10 +13,10 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["600"],
-  variable: "--font-fraunces",
+const hermione = localFont({
+  src: "./fonts/hermione.woff2",
+  weight: "400",
+  variable: "--font-hermione",
   display: "swap",
 });
 
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${interTight.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${interTight.variable} ${hermione.variable}`}>
       <body className="font-sans">
         <Header />
         <main>{children}</main>

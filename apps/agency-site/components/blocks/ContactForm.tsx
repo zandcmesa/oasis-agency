@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { slugify } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 interface ContactFormProps {
@@ -16,6 +17,11 @@ const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@oasis.studio";
 
 export function ContactForm({ products, tone = "light", compact = false }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
+  const [product, setProduct] = useState(() => {
+    if (typeof window === "undefined") return "";
+    const need = new URLSearchParams(window.location.search).get("need");
+    return products.find((p) => slugify(p) === need) ?? "";
+  });
   const dark = tone === "dark";
 
   const field = dark
@@ -72,7 +78,7 @@ export function ContactForm({ products, tone = "light", compact = false }: Conta
       </div>
       <div>
         <label htmlFor="cf-product" className={label}>What do you need?</label>
-        <select id="cf-product" name="product" required defaultValue="" className={`${input} appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>')] bg-[length:18px] bg-[right_14px_center] bg-no-repeat pr-11 ${dark ? "[&>option]:text-ink" : ""}`}>
+        <select id="cf-product" name="product" required value={product} onChange={(e) => setProduct(e.target.value)} className={`${input} appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>')] bg-[length:18px] bg-[right_14px_center] bg-no-repeat pr-11 ${dark ? "[&>option]:text-ink" : ""}`}>
           <option value="" disabled>What do you need?</option>
           {products.map((p) => (
             <option key={p} value={p}>{p}</option>

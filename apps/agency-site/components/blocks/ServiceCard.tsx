@@ -5,7 +5,7 @@ import type { Service } from "@/content/site";
 import { withBasePath } from "@/lib/utils";
 
 export function ServiceCard({ service }: { service: Service }) {
-  const { number, title, copy, image, alt, href, tags } = service;
+  const { number, title, copy, image, alt, href, example, tags } = service;
   return (
     <article className="snap-start shrink-0 w-[85vw] lg:w-[min(85vw,1120px)] lg:h-[68vh] lg:min-h-[540px] rounded-lg overflow-hidden bg-ink text-paper grid lg:grid-cols-2">
       <div className="p-7 lg:p-12 flex flex-col justify-between gap-12 order-2 lg:order-1">
@@ -13,8 +13,11 @@ export function ServiceCard({ service }: { service: Service }) {
         <div className="flex flex-col gap-5">
           <h3 className="text-display-m">{title}</h3>
           <p className="text-body-l text-on-dark-muted max-w-md">{copy}</p>
-          <div className="pt-2">
-            <Button variant="ghost" arrow href={href}>Start a project</Button>
+          <div className="pt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button variant="onDark" arrow href={href}>Start a project</Button>
+            {example && (
+              <Button variant="ghost" arrow href={example.href}>{example.label}</Button>
+            )}
           </div>
         </div>
       </div>

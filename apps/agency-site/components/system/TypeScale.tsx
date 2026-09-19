@@ -7,7 +7,7 @@ const steps = [
   ["body", "1.0625rem / 1.6", "Default"],
   ["body-s", "0.9375rem / 1.5", "Captions, meta"],
   ["eyebrow", "0.75rem / 0.12em / uppercase / 500", "Labels"],
-  ["metric", "clamp(2.5rem, 4vw, 4.5rem) / 1 / tabular", "Numbers"],
+  ["metric", "Hermione 400 / clamp(3rem, 5vw, 5.5rem) / 1 / tabular", "Numbers"],
 ];
 
 export function TypeScale() {
@@ -28,7 +28,7 @@ export function TypeScale() {
       <li className="py-8 grid lg:grid-cols-12 gap-6 items-baseline">
         <div className="lg:col-span-3">
           <p className="font-medium text-ink">wordmark</p>
-          <p className="text-body-s text-ink-muted font-mono">Fraunces 600 / clamp(6rem, 24vw, 30rem)</p>
+          <p className="text-body-s text-ink-muted font-mono">Hermione 400 / clamp(6rem, 24vw, 30rem)</p>
           <p className="text-body-s text-ink-subtle">Footer only</p>
         </div>
         <p className="lg:col-span-9 text-wordmark text-ink leading-none">Oasis</p>

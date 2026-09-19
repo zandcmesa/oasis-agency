@@ -52,7 +52,7 @@ export default function SystemPage() {
 
       <Section lines>
         <h2 className="text-display-m text-ink mb-4">Type</h2>
-        <p className="text-body text-ink-muted mb-6">Inter Tight for everything. Fraunces only for the wordmark.</p>
+        <p className="text-body text-ink-muted mb-6">Inter Tight for everything. Hermione for the wordmark and metric numbers.</p>
         <TypeScale />
       </Section>
 

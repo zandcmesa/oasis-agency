@@ -30,6 +30,7 @@ export interface Service {
   image?: string;
   alt?: string;
   href: string;
+  example?: { label: string; href: string };
   tags?: string[];
 }
 
@@ -40,21 +41,22 @@ export const services: Service[] = [
     copy: "Custom Next.js, headless, fast. Not a template shop.",
     image: "/work/cornerstone-site-home.jpg",
     alt: "Cornerstone Church website homepage",
-    href: "/contact",
+    href: "/contact?need=websites",
+    example: { label: "See Cornerstone Church", href: "https://zandcmesa.github.io/cornerstone-site/index.html" },
   },
   {
     number: "02",
     title: "AI agent workers & teams",
     copy: "Named workers that do real jobs. After-Hours Catcher and Front Desk SMS are the beauty pack.",
     tags: ["After-Hours Catcher", "Front Desk SMS", "Beauty pack"],
-    href: "/contact",
+    href: "/contact?need=ai-agent-workers-and-teams",
   },
   {
     number: "03",
     title: "Digital presence strategy",
     copy: "SEO, AI search, and the plan behind all of it.",
     tags: ["SEO", "AI search", "Consulting"],
-    href: "/contact",
+    href: "/contact?need=digital-presence-strategy",
   },
   {
     number: "04",
@@ -62,7 +64,8 @@ export const services: Service[] = [
     copy: "Strategy and execution. On-brand, on schedule.",
     image: "/work/cornerstone-clip-01.jpg",
     alt: "Cornerstone Church sermon clip",
-    href: "/contact",
+    href: "/contact?need=social-media-content",
+    example: { label: "See the clips", href: "/work#social" },
   },
   {
     number: "05",
@@ -70,7 +73,8 @@ export const services: Service[] = [
     copy: "B-roll production with premium craft.",
     image: "/work/foster-the-city-still.jpg",
     alt: "Foster the City promotional video still",
-    href: "/contact",
+    href: "/contact?need=promotional-video",
+    example: { label: "Watch Foster the City", href: "/work#video" },
   },
 ];
 

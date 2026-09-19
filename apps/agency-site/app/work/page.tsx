@@ -28,7 +28,7 @@ export default function WorkPage() {
       </section>
 
       {/* Websites */}
-      <section className="px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
+      <section id="websites" className="scroll-mt-24 px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <h2 className="text-display-l text-ink mb-10">
@@ -76,7 +76,7 @@ export default function WorkPage() {
       </section>
 
       {/* Social Media Content */}
-      <section className="px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
+      <section id="social" className="scroll-mt-24 px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <h2 className="text-display-l text-ink mb-10">
@@ -131,7 +131,7 @@ export default function WorkPage() {
       </section>
 
       {/* Promotional Video */}
-      <section className="px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
+      <section id="video" className="scroll-mt-24 px-6 lg:px-8 py-16 lg:py-20 border-b border-line">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <h2 className="text-display-l text-ink mb-10">

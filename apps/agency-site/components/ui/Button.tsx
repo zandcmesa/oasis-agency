@@ -23,7 +23,7 @@ const variants = {
   onDark:
     "bg-paper/90 text-ink backdrop-blur-md hover:bg-paper focus-visible:ring-paper focus-visible:ring-offset-ink",
   ghost:
-    "text-current underline underline-offset-[6px] decoration-1 decoration-current/40 hover:decoration-current rounded-none min-h-0 px-0 py-0 focus-visible:ring-oasis-green focus-visible:ring-offset-paper",
+    "text-current underline underline-offset-[6px] decoration-1 decoration-current/40 hover:decoration-current rounded-none min-h-0 p-0 focus-visible:ring-oasis-green focus-visible:ring-offset-paper",
 };
 
 const sizes = {
@@ -52,8 +52,7 @@ export function Button({
   const styles = [
     base,
     variants[variant],
-    withArrow ? `btn-arrow ${size === "lg" ? "text-lg [--icon:44px]" : "text-base [--icon:36px]"}` : sizes[variant === "ghost" ? "md" : size],
-    variant === "ghost" ? "gap-2" : "",
+    withArrow ? `btn-arrow ${size === "lg" ? "text-lg [--icon:44px]" : "text-base [--icon:36px]"}` : variant === "ghost" ? "gap-2 text-base" : sizes[size],
     className,
   ].join(" ");
 
@@ -75,8 +74,9 @@ export function Button({
   );
 
   if (href) {
+    const external = /^https?:\/\//.test(href);
     return (
-      <Link href={href} className={styles} onClick={onClick}>
+      <Link href={href} className={styles} onClick={onClick} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
         {inner}
       </Link>
     );
