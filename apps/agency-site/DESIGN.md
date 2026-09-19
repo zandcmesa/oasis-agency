@@ -97,7 +97,7 @@ Constants live in `lib/motion.ts`.
 | `Hero` | Full-height video, split-text headline, glass contact card, scroll cue, product list. | `hero`, `products` |
 | `ContactForm` | Name, email, product, message. `tone: dark \| light`, `compact`. | `products` |
 | `Ticker` | Scrolling banner with dividers and masked edges. `tone`, `speed`, `href`. | any string list |
-| `AboutSplit` | Headline left, body, love line, brand row, ghost CTA right. | `about` |
+| `AboutSplit` | Headline left, body, love line, optional brand row, ghost CTA right. | `about` |
 | `ServicesRail` | Pinned horizontal scroll on desktop, snap rail on mobile. | `services` |
 | `ServiceCard` | Numbered card with image or typographic green panel plus tags. | one `Service` |
 | `StatementReveal` | Big statement whose words fill on scroll. `tone`. | `statement` |
@@ -134,3 +134,5 @@ Posts JSON to `NEXT_PUBLIC_FORM_ENDPOINT` (Formspree or any JSON endpoint). If u
 - First person plural: "we" / "Oasis".
 - Direct, technical, confident. No fluff, no superlatives.
 - Never mention: $0, free tier, donated services, Gmail, template managers as our tools, "easy", "simple".
+- No past employers listed as clients. Google, HubSpot, and TJX were jobs, not agency engagements. Let the work speak.
+- Years of experience is computed from `foundedYear` (2010) in `content/site.ts`, never hardcoded.

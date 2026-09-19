@@ -21,7 +21,7 @@ export function TypeScale() {
             <p className="text-body-s text-ink-subtle">{use}</p>
           </div>
           <p className={`lg:col-span-9 text-${name} text-ink`}>
-            {name === "metric" ? "19+ 320 92%" : "Cutting-edge tech + design"}
+            {name === "metric" ? "16 5 100%" : "Cutting-edge tech + design"}
           </p>
         </li>
       ))}

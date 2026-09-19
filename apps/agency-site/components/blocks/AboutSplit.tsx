@@ -10,7 +10,7 @@ interface AboutSplitProps {
   headline: string;
   body: string;
   loveLine: string;
-  brands: string[];
+  brands?: string[];
   cta: { label: string; href: string };
 }
 
@@ -33,16 +33,18 @@ export function AboutSplit({ id, eyebrow, headline, body, loveLine, brands, cta 
           <Reveal delay={0.25}>
             <p className="text-heading text-oasis-green">{loveLine}</p>
           </Reveal>
-          <Reveal delay={0.35}>
-            <div className="border-t border-line pt-6">
-              <p className="text-eyebrow text-ink-subtle mb-4">Shipped for</p>
-              <ul className="flex flex-wrap gap-x-8 gap-y-2">
-                {brands.map((b) => (
-                  <li key={b} className="text-display-m text-ink/35 hover:text-ink transition-colors duration-[var(--dur-base)]">{b}</li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
+          {brands && brands.length > 0 && (
+            <Reveal delay={0.35}>
+              <div className="border-t border-line pt-6">
+                <p className="text-eyebrow text-ink-subtle mb-4">Shipped for</p>
+                <ul className="flex flex-wrap gap-x-8 gap-y-2">
+                  {brands.map((b) => (
+                    <li key={b} className="text-display-m text-ink/35 hover:text-ink transition-colors duration-[var(--dur-base)]">{b}</li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          )}
           <Reveal delay={0.45}>
             <Button variant="ghost" arrow href={cta.href}>{cta.label}</Button>
           </Reveal>

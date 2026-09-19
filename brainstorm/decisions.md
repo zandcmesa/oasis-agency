@@ -52,7 +52,7 @@
 - Decision (2026-09-13): Design system modeled on Salient Harbor motion. Inter Tight for all type; Fraunces reserved for the wordmark. Tokens and blocks in `apps/agency-site/DESIGN.md`, kit page at `/system`
 - Decision (2026-09-13): Hero CTA is a contact form, not a scheduler — owner's schedule is unpredictable
 - Decision (2026-09-13): No pricing tiers on the site yet — products aren't packaged that way
-- Decision (2026-09-13): Metrics use truthful numbers only (years, brands shipped for, product lines). Year count placeholder is 19; confirm
+- Decision (2026-09-19): Metrics use truthful numbers only — years since 2010 (computed), five product lines, 100% custom code. No past employers listed as clients; Google, HubSpot, TJX were jobs, not agency engagements
 - Tone: Bold + modern design chops + warm + faith-aligned
 - Goal: Credibility first at launch, then progressive lead gen (SEO, discovery call booking)
 

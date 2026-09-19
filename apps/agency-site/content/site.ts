@@ -1,3 +1,6 @@
+export const foundedYear = 2010;
+export const yearsExperience = new Date().getFullYear() - foundedYear;
+
 export const products = [
   "Websites",
   "AI agent workers & teams",
@@ -15,9 +18,8 @@ export const hero = {
 export const about = {
   eyebrow: "Who we are",
   headline: "Design that holds up. Engineering that ships.",
-  body: "Oasis is a creative studio with real product and engineering depth. Nearly two decades designing and building for the biggest brands in tech, now pointed at ambitious businesses that need more than a template.",
+  body: "Oasis is a creative studio with real product and engineering depth. Designing and building product at scale since 2010, now pointed at ambitious businesses that need more than a template.",
   loveLine: "We love helping churches, ministries, and non-profits.",
-  brands: ["Google", "HubSpot", "TJX"],
   cta: { label: "How we work", href: "/how-we-work" },
 };
 
@@ -76,9 +78,9 @@ export const statement =
   "Most agencies hand you a template and hit a wall the first time you need something real. We build the thing.";
 
 export const metrics = [
-  { value: 19, suffix: "+", label: "Years", detail: "In tech and design, shipping product at scale." },
-  { value: 3, label: "Global brands", detail: "Google, HubSpot, and TJX. We've built for the biggest." },
+  { value: yearsExperience, label: "Years", detail: `Designing and building product at scale since ${foundedYear}.` },
   { value: 5, label: "Product lines", detail: "Web, AI agents, strategy, content, video. One team." },
+  { value: 100, suffix: "%", label: "Custom code", detail: "Every site is written by hand. No templates, no page builders." },
 ];
 
 export const ctaBand = {
