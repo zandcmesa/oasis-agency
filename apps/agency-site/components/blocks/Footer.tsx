@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { SplitText } from "@/components/ui/SplitText";
+import { FitText } from "@/components/ui/FitText";
 
 interface FooterProps {
   links: { label: string; href: string }[];
   products: string[];
+  social: { label: string; href: string }[];
 }
 
-export function Footer({ links, products }: FooterProps) {
+export function Footer({ links, products, social }: FooterProps) {
   return (
     <footer className="bg-paper text-ink border-t border-line overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20">
@@ -34,13 +35,21 @@ export function Footer({ links, products }: FooterProps) {
             </ul>
           </div>
         </div>
-        <div className="border-t border-line py-6 flex flex-wrap justify-between gap-4 text-body-s text-ink-subtle">
+        <div className="pb-10 flex flex-wrap justify-between gap-4 text-body-s text-ink-subtle">
           <p>© {new Date().getFullYear()} Oasis Creative Studios</p>
-          <p>Built by Oasis. Custom code, no templates.</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {social.map((s) => (
+              <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{s.label}</a>
+            ))}
+            <p>Built by Oasis. Custom code, no templates.</p>
+          </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 translate-y-[0.1em]">
-        <SplitText as="p" effect="rise" className="text-wordmark text-ink text-center">Oasis</SplitText>
+      <div className="relative border-t border-line">
+        <div aria-hidden className="absolute inset-0 footer-glow" />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-12">
+          <FitText as="p" className="text-wordmark text-ink">oasis</FitText>
+        </div>
       </div>
     </footer>
   );

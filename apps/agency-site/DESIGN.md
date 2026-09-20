@@ -37,7 +37,7 @@ Inter Tight for everything. Hermione (a local serif, `app/fonts/hermione.woff2`)
 | `text-body-s` | 0.9375rem / 1.5 | Captions, meta, form help |
 | `text-eyebrow` | 0.75rem / 1 / 0.12em uppercase / 500 | Labels, badges, ticker |
 | `text-metric` | Hermione 400, clamp(3rem, 5vw, 5.5rem) / 1 / -0.01em tabular | Numbers |
-| `text-wordmark` | Hermione 400, clamp(6rem, 24vw, 30rem) / 0.8 | Footer wordmark only |
+| `text-wordmark` | Hermione 400, size set by `FitText` to fill the container | Footer wordmark only |
 
 Rules: one display-xl per page. Headlines get `SplitText`, never a plain fade. Body copy maxes at about 60 characters per line (`max-w-xl` or `max-w-2xl`).
 
@@ -87,6 +87,7 @@ Constants live in `lib/motion.ts`.
 | `HoverSwapLink` | `href`, `active` | Nav link with the text swap. |
 | `ScrollCue` | `href`, `label` | Looping arrow in a hairline circle. |
 | `Wordmark` | `className` | Inline SVG, `currentColor`. |
+| `BrowserFrame` | `src`, `alt`, `className` | Minimal browser chrome around a site screenshot, 16:10, top-cropped. |
 | `ArrowIcon` | `className` | 24px up-right arrow. |
 
 ## Blocks (`components/blocks/`)
@@ -99,12 +100,12 @@ Constants live in `lib/motion.ts`.
 | `Ticker` | Scrolling banner with dividers and masked edges. `tone`, `speed`, `href`. | any string list |
 | `AboutSplit` | Headline left, body, love line, optional brand row, ghost CTA right. | `about` |
 | `ServicesRail` | Pinned horizontal scroll on desktop, snap rail on mobile. | `services` |
-| `ServiceCard` | Numbered card with image or typographic green panel plus tags. Two CTAs: "Start a project" (links to `/contact?need=<slug>`, which preselects the product) and an optional example link. | one `Service` |
+| `ServiceCard` | Numbered card with image, browser-framed screenshot (`frame: "browser"`) on the green panel, or typographic green panel plus tags. Two CTAs: "Start a project" (links to `/contact?need=<slug>`, which preselects the product) and an optional example link. | one `Service` |
 | `StatementReveal` | Big statement whose words fill on scroll. `tone`. | `statement` |
 | `Metrics` | Three badges, count-up numbers, one line each. `tone`. | `metrics` |
 | `Testimonials` | Three lifted cards. Sample copy only; not on the homepage until real quotes exist. | `testimonialsSample` |
 | `CTABand` | Headline plus arrow button. | `ctaBand` |
-| `Footer` | Links, copyright, giant Hermione wordmark. | `footerLinks`, `products` |
+| `Footer` | Links, social, copyright above a full-bleed divider; below it a lowercase Hermione wordmark fitted to the container width over a soft spring-green glow. | `footerLinks`, `products`, `social` |
 
 All copy lives in `content/site.ts`. Pages assemble blocks and pass content in.
 
@@ -118,6 +119,7 @@ Posts JSON to `NEXT_PUBLIC_FORM_ENDPOINT` (Formspree or any JSON endpoint). If u
 
 ## Assets
 
+- Foster the City promo: `public/work/foster-the-city-launch.mp4` (H.264, 1280x720, ~25 MB), re-encode from the 1080p master with ffmpeg CRF 23 when the cut changes.
 - Hero: `public/atmosphere/hero-grass.mp4` (H.264, 1920x1080, no audio, ~2.5 MB) with `hero-grass.jpg` poster.
 - Wordmark: `public/oasis-wordmark.svg` uses `currentColor`; the inline `Wordmark` component mirrors it.
 - All asset URLs go through `withBasePath()`.

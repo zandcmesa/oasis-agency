@@ -120,10 +120,14 @@ body {
 }
 @utility text-wordmark {
   font-family: var(--font-serif);
-  font-size: clamp(6rem, 24vw, 30rem);
-  line-height: 0.8;
   letter-spacing: -0.01em;
   font-weight: 400;
+}
+
+.footer-glow {
+  background:
+    radial-gradient(60% 90% at 38% 100%, rgb(143 205 176 / 0.55) 0%, rgb(143 205 176 / 0.22) 45%, transparent 75%),
+    radial-gradient(35% 70% at 70% 100%, rgb(196 164 132 / 0.18) 0%, transparent 70%);
 }
 
 /* Surfaces and lines */

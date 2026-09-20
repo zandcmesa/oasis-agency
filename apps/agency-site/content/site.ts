@@ -29,6 +29,7 @@ export interface Service {
   copy: string;
   image?: string;
   alt?: string;
+  frame?: "browser";
   href: string;
   example?: { label: string; href: string };
   tags?: string[];
@@ -41,6 +42,7 @@ export const services: Service[] = [
     copy: "Custom Next.js, headless, fast. Not a template shop.",
     image: "/work/cornerstone-site-home.jpg",
     alt: "Cornerstone Church website homepage",
+    frame: "browser",
     href: "/contact?need=websites",
     example: { label: "See Cornerstone Church", href: "https://zandcmesa.github.io/cornerstone-site/index.html" },
   },
@@ -91,6 +93,10 @@ export const ctaBand = {
   headline: "Ready to build?",
   cta: { label: "Start a project", href: "/contact" },
 };
+
+export const social = [
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCB6flClJ6upknlnEAXG1agQ" },
+];
 
 export const footerLinks = [
   { label: "Work", href: "/work" },

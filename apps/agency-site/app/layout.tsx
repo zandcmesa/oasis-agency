@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/blocks/Header";
 import { Footer } from "@/components/blocks/Footer";
-import { footerLinks, products } from "@/content/site";
+import { footerLinks, products, social } from "@/content/site";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="font-sans">
         <Header />
         <main>{children}</main>
-        <Footer links={footerLinks} products={products} />
+        <Footer links={footerLinks} products={products} social={social} />
       </body>
     </html>
   );

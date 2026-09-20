@@ -28,10 +28,10 @@ export function TypeScale() {
       <li className="py-8 grid lg:grid-cols-12 gap-6 items-baseline">
         <div className="lg:col-span-3">
           <p className="font-medium text-ink">wordmark</p>
-          <p className="text-body-s text-ink-muted font-mono">Hermione 400 / clamp(6rem, 24vw, 30rem)</p>
+          <p className="text-body-s text-ink-muted font-mono">Hermione 400 / fitted to container width</p>
           <p className="text-body-s text-ink-subtle">Footer only</p>
         </div>
-        <p className="lg:col-span-9 text-wordmark text-ink leading-none">Oasis</p>
+        <p className="lg:col-span-9 text-wordmark text-ink leading-none text-[clamp(4rem,12vw,10rem)]">oasis</p>
       </li>
     </ul>
   );
