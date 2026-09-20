@@ -3,6 +3,7 @@ import { AboutSplit } from "@/components/blocks/AboutSplit";
 import { CTABand } from "@/components/blocks/CTABand";
 import { ContactForm } from "@/components/blocks/ContactForm";
 import { Hero } from "@/components/blocks/Hero";
+import { LegalDoc } from "@/components/blocks/LegalDoc";
 import { Metrics } from "@/components/blocks/Metrics";
 import { ServicesRail } from "@/components/blocks/ServicesRail";
 import { StatementReveal } from "@/components/blocks/StatementReveal";
@@ -19,6 +20,7 @@ import { MediaReveal } from "@/components/ui/MediaReveal";
 import { ScrollCue } from "@/components/ui/ScrollCue";
 import { Section } from "@/components/ui/Section";
 import { about, ctaBand, hero, metrics, products, services, statement, testimonialsSample } from "@/content/site";
+import { accessibility } from "@/content/legal";
 import { withBasePath } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -134,6 +136,9 @@ export default function SystemPage() {
 
       <Label>CTABand</Label>
       <CTABand {...ctaBand} />
+
+      <Label>LegalDoc</Label>
+      <LegalDoc {...accessibility} />
     </div>
   );
 }

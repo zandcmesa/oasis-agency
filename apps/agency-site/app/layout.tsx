@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/blocks/Header";
 import { Footer } from "@/components/blocks/Footer";
-import { footerLinks, products, social } from "@/content/site";
+import { analytics, footerLinks, legalLinks, products, siteDomain, social } from "@/content/site";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ const hermione = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${siteDomain}`),
   title: "Oasis Creative Studios — Cutting-edge tech + design for ambitious brands",
   description:
     "Websites, AI agent teams, digital presence strategy, social content, and promotional video. One team that actually builds.",
@@ -39,9 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${interTight.variable} ${hermione.variable}`}>
       <body className="font-sans">
+        <a href="#main" className="skip-link">Skip to main content</a>
         <Header />
-        <main>{children}</main>
-        <Footer links={footerLinks} products={products} social={social} />
+        <main id="main">{children}</main>
+        <Footer links={footerLinks} products={products} social={social} legal={legalLinks} />
+        {process.env.NODE_ENV === "production" && (
+          <Script src="https://cloud.umami.is/script.js" data-website-id={analytics.websiteId} data-domains={analytics.domains} strategy="afterInteractive" />
+        )}
       </body>
     </html>
   );

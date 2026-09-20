@@ -105,9 +105,10 @@ Constants live in `lib/motion.ts`.
 | `Metrics` | Three badges, count-up numbers, one line each. `tone`. | `metrics` |
 | `Testimonials` | Three lifted cards. Sample copy only; not on the homepage until real quotes exist. | `testimonialsSample` |
 | `CTABand` | Headline plus arrow button. | `ctaBand` |
-| `Footer` | Links, social, copyright above a full-bleed divider; below it a lowercase Hermione wordmark fitted to the container width over a soft spring-green glow. | `footerLinks`, `products`, `social` |
+| `Footer` | Links, social, legal links, copyright above a full-bleed divider; below it a lowercase Hermione wordmark fitted to the container width over a soft spring-green glow. | `footerLinks`, `products`, `social`, `legalLinks` |
+| `LegalDoc` | Page header plus a narrow prose column of headed sections. Strings render as paragraphs, string arrays as lists. Used by `/privacy` and `/accessibility`. | `privacy`, `accessibility` in `content/legal.ts` |
 
-All copy lives in `content/site.ts`. Pages assemble blocks and pass content in.
+All copy lives in `content/site.ts`; policy text lives in `content/legal.ts`. Pages assemble blocks and pass content in.
 
 ## Homepage order
 
@@ -115,14 +116,22 @@ Hero, Ticker, AboutSplit, ServicesRail, StatementReveal (ink), Metrics (ink), CT
 
 ## Contact form
 
-Posts JSON to `NEXT_PUBLIC_FORM_ENDPOINT` (Formspree or any JSON endpoint). If unset, it opens a mail link to `NEXT_PUBLIC_CONTACT_EMAIL`. Both are read at build time; the GitHub Pages workflow passes them from repository variables `FORM_ENDPOINT` and `CONTACT_EMAIL`.
+Posts JSON to `NEXT_PUBLIC_FORM_ENDPOINT` (Formspree). If unset, it opens a mail link to `contactEmail` from `content/site.ts`, which reads `NEXT_PUBLIC_CONTACT_EMAIL`. Both are read at build time; the GitHub Pages workflow passes them from repository variables `FORM_ENDPOINT` and `CONTACT_EMAIL`. Success and error states are announced with `role="status"` and `role="alert"`. A one-line consent notice under the button links to `/privacy`.
+
+## Hosting, domain, analytics
+
+Static export deployed to GitHub Pages on `oasisagency.is` (`public/CNAME`). No base path. Umami Cloud analytics loads in production builds only, from `analytics` in `content/site.ts`, restricted with `data-domains` so local and preview hosts are not counted. It sets no cookies, so the privacy policy states there is no banner. If a cookie-setting tool is ever added, that policy and a consent mechanism both have to change.
+
+## Legal pages
+
+`/privacy` and `/accessibility` render `content/legal.ts` through `LegalDoc`. Bump the `effective` date whenever the text changes. The accessibility statement commits to WCAG 2.1 AA; do not ship a block that breaks keyboard access, reduced motion, or contrast without updating "Known limitations".
 
 ## Assets
 
 - Foster the City promo: `public/work/foster-the-city-launch.mp4` (H.264, 1280x720, ~25 MB), re-encode from the 1080p master with ffmpeg CRF 23 when the cut changes.
 - Hero: `public/atmosphere/hero-grass.mp4` (H.264, 1920x1080, no audio, ~2.5 MB) with `hero-grass.jpg` poster.
 - Wordmark: `public/oasis-wordmark.svg` uses `currentColor`; the inline `Wordmark` component mirrors it.
-- All asset URLs go through `withBasePath()`.
+- All asset URLs go through `withBasePath()`, which is a no-op unless `NEXT_PUBLIC_BASE_PATH` is set.
 
 ## How to change
 

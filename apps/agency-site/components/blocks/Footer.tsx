@@ -5,9 +5,10 @@ interface FooterProps {
   links: { label: string; href: string }[];
   products: string[];
   social: { label: string; href: string }[];
+  legal: { label: string; href: string }[];
 }
 
-export function Footer({ links, products, social }: FooterProps) {
+export function Footer({ links, products, social, legal }: FooterProps) {
   return (
     <footer className="bg-paper text-ink border-t border-line overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20">
@@ -38,6 +39,9 @@ export function Footer({ links, products, social }: FooterProps) {
         <div className="pb-10 flex flex-wrap justify-between gap-4 text-body-s text-ink-subtle">
           <p>© {new Date().getFullYear()} Oasis Creative Studios</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {legal.map((l) => (
+              <Link key={l.href} href={l.href} className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{l.label}</Link>
+            ))}
             {social.map((s) => (
               <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{s.label}</a>
             ))}

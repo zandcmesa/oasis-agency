@@ -1,4 +1,11 @@
 export const foundedYear = 2010;
+export const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@oasisagency.is";
+export const siteDomain = "oasisagency.is";
+
+export const analytics = {
+  websiteId: "f7a34248-d8a1-4317-8fdc-fbcbff7c4fab",
+  domains: siteDomain,
+};
 export const yearsExperience = new Date().getFullYear() - foundedYear;
 
 export const products = [
@@ -102,6 +109,11 @@ export const footerLinks = [
   { label: "Work", href: "/work" },
   { label: "How we work", href: "/how-we-work" },
   { label: "Contact", href: "/contact" },
+];
+
+export const legalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
 
 export const testimonialsSample = [

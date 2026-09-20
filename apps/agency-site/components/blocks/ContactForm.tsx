@@ -2,7 +2,9 @@
 
 import { FormEvent, useState } from "react";
 import { slugify } from "@/lib/utils";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { contactEmail as email } from "@/content/site";
 
 interface ContactFormProps {
   products: string[];
@@ -13,7 +15,6 @@ interface ContactFormProps {
 type Status = "idle" | "submitting" | "success" | "error";
 
 const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
-const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@oasis.studio";
 
 export function ContactForm({ products, tone = "light", compact = false }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
@@ -57,7 +58,7 @@ export function ContactForm({ products, tone = "light", compact = false }: Conta
 
   if (status === "success") {
     return (
-      <div className={`${dark ? "text-paper" : "text-ink"} py-6`}>
+      <div role="status" className={`${dark ? "text-paper" : "text-ink"} py-6`}>
         <p className="text-heading mb-2">Got it.</p>
         <p className={dark ? "text-on-dark-muted" : "text-ink-muted"}>We read every message and reply within two business days.</p>
       </div>
@@ -93,9 +94,12 @@ export function ContactForm({ products, tone = "light", compact = false }: Conta
         <Button type="submit" variant={dark ? "onDark" : "primary"} size={compact ? "md" : "lg"} arrow disabled={status === "submitting"} className={compact ? "w-full justify-between" : ""}>
           {status === "submitting" ? "Sending" : "Start a conversation"}
         </Button>
-        {status === "error" && (
-          <p className="text-body-s text-soft-clay mt-3">Something broke on our end. Email us directly at {email}.</p>
-        )}
+        <p role="alert" className="text-body-s text-soft-clay mt-3 empty:hidden">
+          {status === "error" && `Something broke on our end. Email us directly at ${email}.`}
+        </p>
+        <p className={`text-body-s mt-4 ${dark ? "text-on-dark-subtle" : "text-ink-subtle"}`}>
+          We use what you send to reply to you and nothing else. <Link href="/privacy" className="underline underline-offset-4 hover:text-current">Privacy policy</Link>
+        </p>
       </div>
     </form>
   );

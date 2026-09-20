@@ -300,3 +300,26 @@ button:hover .swap__text::after {
     animation: none;
   }
 }
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-oasis-green);
+  color: var(--color-paper);
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
