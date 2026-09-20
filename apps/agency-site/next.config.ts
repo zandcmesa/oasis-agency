@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     formats: ["image/avif", "image/webp"],
   },
-  basePath: "/oasis-agency",
-  assetPrefix: "/oasis-agency",
   trailingSlash: true,
 };
 

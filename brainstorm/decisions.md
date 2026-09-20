@@ -42,8 +42,17 @@
 - Decision: Primarily custom/headless Next.js for complex features; Planning Center API integrations; flexible per client
 - Why: Engineering depth is the differentiator — not being locked to one platform is part of the value
 
+## Products (2026-09-13)
+- Decision: Five products, any sector — Websites, AI agent workers & teams, Digital presence strategy, Social media content, Promotional video
+- Why: The owner isn't limiting to churches; churches, ministries, and non-profits are named as loved, not as the niche
+- Supersedes the six church-specific services list above as the public offer
+
 ## Agency Website
 - Decision: Built in Next.js (custom code — the site IS the portfolio)
+- Decision (2026-09-13): Design system modeled on Salient Harbor motion. Inter Tight for all type; Fraunces reserved for the wordmark. Tokens and blocks in `apps/agency-site/DESIGN.md`, kit page at `/system`
+- Decision (2026-09-13): Hero CTA is a contact form, not a scheduler — owner's schedule is unpredictable
+- Decision (2026-09-13): No pricing tiers on the site yet — products aren't packaged that way
+- Decision (2026-09-19): Metrics use truthful numbers only — years since 2010 (computed), five product lines, 100% custom code. No past employers listed as clients; Google, HubSpot, TJX were jobs, not agency engagements
 - Tone: Bold + modern design chops + warm + faith-aligned
 - Goal: Credibility first at launch, then progressive lead gen (SEO, discovery call booking)
 

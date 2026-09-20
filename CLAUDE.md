@@ -16,18 +16,15 @@ The gap in the market: most church agencies (like the incumbent, Rose and Gold) 
 
 ## Services
 
-### Priority tier (build these first, make them repeatable)
-1. **Church website design & build** — Custom Next.js, headless, modern. The most common ask and the gateway service.
-2. **Planning Center / Church Center integration** — Solve the "two website" problem. Most churches using Planning Center have their main site AND a separate Church Center URL. We unify the experience so members never feel like they've left the site.
-3. **Sermon search & library** — YouTube auto-transcription + custom search UI. Lets congregants search by topic, scripture, speaker, series. Highly differentiating, currently unsolvable by most agencies.
-4. **Email & text campaigns** — Strategy + execution. Churches want this but have no one to run it. Ongoing service, high retention.
-5. **Brand & visual identity** — Logo, color, typography, voice guide. Foundation for everything else.
-6. **Promotional video** — B-roll production. Owner has proven capability here. Premium add-on.
+Oasis sells five things, to any sector. Churches, ministries, and non-profits are called out as loved, not as a limit.
 
-### Secondary tier (offer, but don't build full solutions for yet)
-- Digital strategy & consulting
-- SEO and AI search optimization
-- Giving platform optimization
+1. **Websites** — Custom Next.js, headless, fast. Not a template shop.
+2. **AI agent workers & teams** — Named workers that do real jobs. After-Hours Catcher + Front Desk SMS are the beauty pack.
+3. **Digital presence strategy** — SEO, AI search, and the plan behind all of it.
+4. **Social media content** — Strategy and execution.
+5. **Promotional video** — B-roll production, premium craft.
+
+Church-specific capabilities (Planning Center / Church Center integration, sermon search, email and text campaigns) live inside Websites and Strategy rather than as separate product lines.
 
 ## First prospect: Cornerstone Church
 
@@ -50,7 +47,7 @@ When designing pricing, anchor to: What does a mid-size church currently pay Ros
 ## Tech decisions
 
 - **Client work:** Custom/headless Next.js for complex builds; Planning Center API for integrations; flexible per client
-- **Agency website:** Next.js (custom code) — the site itself is a portfolio piece
+- **Agency website:** Next.js (custom code) — the site itself is a portfolio piece. Design system and block kit documented in `apps/agency-site/DESIGN.md`; every block renders on `/system`.
 - **Staffing:** Solo nights/weekends. No contractors until demand exceeds capacity.
 
 ## Agency website goals
