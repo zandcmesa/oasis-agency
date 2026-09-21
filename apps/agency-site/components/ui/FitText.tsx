@@ -43,7 +43,7 @@ export function FitText({ as = "p", className = "", children }: FitTextProps) {
         {children}
       </span>
       <Tag
-        className="block whitespace-nowrap leading-none pt-[0.08em] pb-[0.04em]"
+        className="block whitespace-nowrap leading-none -mt-[0.065em] -mb-[0.13em]"
         style={{ fontSize: size }}
       >
         <motion.span

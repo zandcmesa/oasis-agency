@@ -62,7 +62,7 @@ export function Footer({ links, products, social, legal }: FooterProps) {
       </div>
       <div className="relative border-t border-line">
         <div aria-hidden className="absolute inset-0 footer-glow" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-12">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-6 md:py-10">
           <FitText as="p" className="text-wordmark text-ink">oasis</FitText>
         </div>
       </div>
