@@ -8,6 +8,14 @@ interface FooterProps {
   legal: { label: string; href: string }[];
 }
 
+function YouTubeIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />
+    </svg>
+  );
+}
+
 export function Footer({ links, products, social, legal }: FooterProps) {
   return (
     <footer className="bg-paper text-ink border-t border-line overflow-hidden">
@@ -16,6 +24,13 @@ export function Footer({ links, products, social, legal }: FooterProps) {
           <div className="md:col-span-6">
             <p className="text-heading max-w-md">Cutting-edge tech + design for ambitious brands.</p>
             <p className="text-body-s text-ink-muted mt-4">We love helping churches, ministries, and non-profits.</p>
+            <div className="flex gap-4 mt-6">
+              {social.map((s) => (
+                <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-oasis-green hover:text-ink transition-colors duration-[var(--dur-fast)]">
+                  <YouTubeIcon />
+                </a>
+              ))}
+            </div>
           </div>
           <div className="md:col-span-3">
             <p className="text-eyebrow text-ink-subtle mb-5">Navigate</p>
@@ -41,9 +56,6 @@ export function Footer({ links, products, social, legal }: FooterProps) {
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {legal.map((l) => (
               <Link key={l.href} href={l.href} className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{l.label}</Link>
-            ))}
-            {social.map((s) => (
-              <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{s.label}</a>
             ))}
             <p>Built by Oasis. Custom code, no templates.</p>
           </div>
