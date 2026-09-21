@@ -57,7 +57,6 @@ export function Footer({ links, products, social, legal }: FooterProps) {
             {legal.map((l) => (
               <Link key={l.href} href={l.href} className="hover:text-oasis-green transition-colors duration-[var(--dur-fast)]">{l.label}</Link>
             ))}
-            <p>Built by Oasis. Custom code, no templates.</p>
           </div>
         </div>
       </div>
